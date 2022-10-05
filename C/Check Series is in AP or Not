@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(){
+    int a[20],i,n,flag=0;
+    printf("Enter the no. of elements you want: ");
+    scanf("%d",&n);
+    printf("The elements are: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n-2;i++){
+       if(a[i+1]-a[i]==a[i+2]-a[i+1]){
+        flag=1;
+        continue;
+       }
+       else{
+        flag=0;
+        break;
+       }
+    }
+    if(flag==1){
+        printf("Series is in AP");
+    }
+    else{
+        printf("Series is not in AP");
+    }
+}
